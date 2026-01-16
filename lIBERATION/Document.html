@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liberation War Documents</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Bangladesh Archive</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="http://127.0.0.1:5500/main.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5500/Document.html">Documents</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5500/interview.html">Interviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5500/Photo%20Gallery.html">Photos</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5500/Contact%20form.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<br>
+<div class="container my-5">
+  <h1 class="text-center mb-4">Liberation War (Documents)</h1>
+
+ 
+  <div class="row mb-4">
+    <div class="col-md-4">
+      <label for="typeFilter" class="form-label">Filter by Type</label>
+      <select id="typeFilter" class="form-select">
+        <option value="">All Types</option>
+        <option value="treaty">Treaty</option>
+        <option value="declaration">Declaration</option>
+        <option value="correspondence">Official Correspondence</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="dateFilter" class="form-label">Filter by Date</label>
+      <input type="date" id="dateFilter" class="form-control">
+    </div>
+    <div class="col-md-4">
+      <label for="relevanceFilter" class="form-label">Sort by Relevance</label>
+      <select id="relevanceFilter" class="form-select">
+        <option value="">Default</option>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Documents Catalog -->
+  <div class="row row-cols-1 row-cols-md-3 g-4" id="documentsContainer">
+    <!-- Example Document Card -->
+    <div class="col document-card" data-type="treaty" data-date="1971-03-15" data-relevance="high">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Treaty of Example</h5>
+          <p class="card-text">A significant treaty during the Liberation War outlining major agreements.</p>
+          <p><strong>Published:</strong> March 15, 1971</p>
+          <p><strong>Source:</strong> National Archive</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#documentModal" data-title="Treaty of Example" data-desc="A significant treaty during the Liberation War outlining major agreements." data-date="March 15, 1971" data-source="National Archive">View Details</button>
+        </div>
+      </div>
+    </div>
+
+
+      <div class="col document-card" data-type="declaration" data-date="1971-03-26" data-relevance="high">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Declaration of Independence</h5>
+        <p class="card-text">The historic declaration marking Bangladesh's independence from Pakistan.</p>
+        <p><strong>Published:</strong> March 26, 1971</p>
+        <p><strong>Source:</strong> Government Archives</p>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#documentModal" data-title="Declaration of Independence" data-desc="The historic declaration marking Bangladesh's independence from Pakistan." data-date="March 26, 1971" data-source="Government Archives">View Details</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Document 3 -->
+  <div class="col document-card" data-type="correspondence" data-date="1971-04-10" data-relevance="medium">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Official Correspondence A</h5>
+        <p class="card-text">A key correspondence between the provisional government and international allies.</p>
+        <p><strong>Published:</strong> April 10, 1971</p>
+        <p><strong>Source:</strong> Liberation War Museum</p>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#documentModal" data-title="Official Correspondence A" data-desc="A key correspondence between the provisional government and international allies." data-date="April 10, 1971" data-source="Liberation War Museum">View Details</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Document 4 -->
+  <div class="col document-card" data-type="treaty" data-date="1971-05-01" data-relevance="medium">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Treaty of Alliance</h5>
+        <p class="card-text">An agreement between freedom fighters and supporting nations during the Liberation War.</p>
+        <p><strong>Published:</strong> May 1, 1971</p>
+        <p><strong>Source:</strong> National Archive</p>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#documentModal" data-title="Treaty of Alliance" data-desc="An agreement between freedom fighters and supporting nations during the Liberation War." data-date="May 1, 1971" data-source="National Archive">View Details</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Document 5 -->
+  <div class="col document-card" data-type="declaration" data-date="1971-06-12" data-relevance="low">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Declaration to United Nations</h5>
+        <p class="card-text">Official letter sent to the UN describing the atrocities and seeking support.</p>
+        <p><strong>Published:</strong> June 12, 1971</p>
+        <p><strong>Source:</strong> Government Archive</p>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#documentModal" data-title="Declaration to United Nations" data-desc="Official letter sent to the UN describing the atrocities and seeking support." data-date="June 12, 1971" data-source="Government Archive">View Details</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Document 6 -->
+  <div class="col document-card" data-type="correspondence" data-date="1971-07-20" data-relevance="medium">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Official Correspondence B</h5>
+        <p class="card-text">Communication documenting military strategies and coordination between leaders.</p>
+        <p><strong>Published:</strong> July 20, 1971</p>
+        <p><strong>Source:</strong> Liberation War Archive</p>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#documentModal" data-title="Official Correspondence B" data-desc="Communication documenting military strategies and coordination between leaders." data-date="July 20, 1971" data-source="Liberation War Archive">View Details</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+    <!-- You can duplicate document cards here for more documents -->
+  </div>
+  
+</div>
+
+<!-- Document Details Modal -->
+<div class="modal fade" id="documentModal" tabindex="-1" aria-labelledby="documentModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="documentModalLabel">Document Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p id="modalDescription"></p>
+        <p><strong>Published:</strong> <span id="modalDate"></span></p>
+        <p><strong>Source:</strong> <span id="modalSource"></span></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS to handle modal data -->
+<script>
+  const documentModal = document.getElementById('documentModal');
+  documentModal.addEventListener('show.bs.modal', event => {
+    const button = event.relatedTarget;
+    const title = button.getAttribute('data-title');
+    const desc = button.getAttribute('data-desc');
+    const date = button.getAttribute('data-date');
+    const source = button.getAttribute('data-source');
+
+    documentModal.querySelector('.modal-title').textContent = title;
+    documentModal.querySelector('#modalDescription').textContent = desc;
+    documentModal.querySelector('#modalDate').textContent = date;
+    documentModal.querySelector('#modalSource').textContent = source;
+  });
+</script>
+
+</body>
+</html>
